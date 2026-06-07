@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predict.IO — Simuladora Numérica de Crisis</title>
+  <meta name="description" content="Simuladora numérica de crisis de abastecimiento urbano. Proyecto final de Métodos Numéricos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-logo">Predict.IO</span>
+      <button id="btnCloseSidebar" class="btn-close-sidebar"><i class="fa fa-times"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#inicio" class="sidebar-link active" data-section="inicio">
+        <i class="fa fa-house"></i>
+        <span>Inicio</span>
+      </a>
+      <div class="sidebar-section-title">Módulos</div>
+      <a href="#escenarioA" class="sidebar-link" data-section="escenarioA">
+        <i class="fa fa-table-cells"></i>
+        <span>Módulo 1: Escenario A</span>
+        <small>Sistemas de Ecuaciones</small>
+      </a>
+      <a href="#escenarioB" class="sidebar-link" data-section="escenarioB">
+        <i class="fa fa-gas-pump"></i>
+        <span>Módulo 2: Escenario B</span>
+        <small>Ecuaciones Diferenciales</small>
+      </a>
+      <a href="#escenarioC" class="sidebar-link" data-section="escenarioC">
+        <i class="fa fa-chart-area"></i>
+        <span>Módulo 3: Escenario C</span>
+        <small>Interpolación Numérica</small>
+      </a>
+      <a href="#escenarioD" class="sidebar-link" data-section="escenarioD">
+        <i class="fa fa-wallet"></i>
+        <span>Módulo 4: Escenario D</span>
+        <small>Integración Numérica</small>
+      </a>
+      <a href="#escenarioE" class="sidebar-link" data-section="escenarioE">
+        <i class="fa fa-crosshairs"></i>
+        <span>Módulo 5: Escenario E</span>
+        <small>Raíces de Ecuaciones</small>
+      </a>
+      <div class="sidebar-section-title">Análisis</div>
+      <a href="#conclusiones" class="sidebar-link" data-section="conclusiones">
+        <i class="fa fa-graduation-cap"></i>
+        <span>Conclusiones</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <button id="btnThemeSidebar" class="btn-theme-sidebar">
+        <i class="fa fa-moon" id="themeIconSidebar"></i>
+        <span id="themeTextSidebar">Modo oscuro</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- TOPBAR -->
+  <header class="topbar" id="topbar">
+    <button id="btnOpenSidebar" class="btn-hamburger">
+      <i class="fa fa-bars"></i>
+    </button>
+    <a href="#inicio" class="topbar-brand">Predict.IO</a>
+    <div class="topbar-right">
+      <span class="topbar-subtitle">Simuladora Numérica de Crisis</span>
+      <button id="btnTheme" class="btn-theme-top">
+        <i class="fa fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="mainContent">
+
+    <!-- INICIO -->
+    <section id="inicio" class="section-inicio">
+      <div class="container-lg">
+        <div class="hero-block">
+          <div class="hero-badge">Proyecto Final — Métodos Numéricos</div>
+          <h1 class="titulo-principal">Predict.IO</h1>
+          <p class="subtitulo">Bienvenido a la Simuladora Numérica de Crisis de Abastecimiento Urbano</p>
+          <div class="hero-desc">
+            <p>
+              ¡Hola! Esta herramienta interactiva te permite explorar cómo los métodos numéricos resuelven problemas del mundo real. 
+              En situaciones de crisis (bloqueos, inflación, escasez), las ciudades enfrentan grandes retos. Aquí usaremos las matemáticas para simular 5 escenarios comunes.
+            </p>
+            <p>
+              <strong>¿Cómo usar esta simuladora?</strong> Navega por los 5 escenarios desde el menú lateral. En cada uno encontrarás un panel para ingresar datos (¡o usar los datos sugeridos por defecto!) y podrás calcular los resultados al instante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- ESCENARIO A -->
+    <section id="escenarioA" class="section-modulo">
+      <div class="container-lg">
+        <div class="section-label">
+          <span class="label-chip chip-1">Escenario A</span>
+          <h2>Optimización del abastecimiento y red de transporte</h2>
+          <p class="section-sub">Sistemas de Ecuaciones Lineales</p>
+        </div>
+        <div class="contexto-box">
+          <div class="contexto-icon"><i class="fa fa-map-location-dot"></i></div>
+          <div>
+            <strong>Contexto:</strong> Una ciudad necesita abastecer tres zonas (Norte, Centro, Sur) desde tres plantas.
+            El sistema <strong>Ax = b</strong> representa la capacidad de las rutas y la demanda mínima.
+            <strong>¡Inténtalo!</strong> Llena la matriz A (rutas) y el vector b (demanda), y selecciona un método numérico para ver cuánto debe enviar cada planta. Si una ruta se bloquea, ingresa un 0 en esa posición de la matriz.
+          </div>
+        </div>
+        <div id="modulo1-app"></div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- ESCENARIO B -->
+    <section id="escenarioB" class="section-modulo alt-bg">
+      <div class="container-lg">
+        <div class="section-label">
+          <span class="label-chip chip-2">Escenario B</span>
+          <h2>Vaciado crítico de reservas en plantas de carburantes</h2>
+          <p class="section-sub">Ecuaciones Diferenciales Ordinarias</p>
+        </div>
+        <div class="contexto-box">
+          <div class="contexto-icon"><i class="fa fa-fire-flame-simple"></i></div>
+          <div>
+            <strong>Contexto:</strong> Simularemos cómo disminuyen las reservas de carburantes cuando el reabastecimiento es limitado y el consumo aumenta por pánico. El modelo es: <span style="font-family:monospace;background:rgba(201,184,232,0.2);padding:2px 8px;border-radius:6px;">dR/dt = entrada - consumo</span>.
+            <strong>¡Experimenta!</strong> Cambia el factor de pánico o la tasa de entrada y observa en qué día la reserva llega a un nivel crítico.
+          </div>
+        </div>
+        <div id="modulo2-app"></div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- ESCENARIO C -->
+    <section id="escenarioC" class="section-modulo">
+      <div class="container-lg">
+        <div class="section-label">
+          <span class="label-chip chip-3">Escenario C</span>
+          <h2>Desabastecimiento y curva continua de precios</h2>
+          <p class="section-sub">Interpolación Numérica</p>
+        </div>
+        <div class="contexto-box">
+          <div class="contexto-icon"><i class="fa fa-arrow-trend-up"></i></div>
+          <div>
+            <strong>Contexto:</strong> Analizaremos cómo varían los precios de productos básicos con el tiempo, teniendo solo algunos datos dispersos. 
+            <strong>¡Prueba esto!</strong> Agrega los días y precios registrados. Luego pide estimar el precio para un día en el que no se tomaron datos. Verás la curva reconstruida.
+          </div>
+        </div>
+        <div id="modulo3-app"></div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- ESCENARIO D -->
+    <section id="escenarioD" class="section-modulo alt-bg">
+      <div class="container-lg">
+        <div class="section-label">
+          <span class="label-chip chip-4">Escenario D</span>
+          <h2>Costo acumulado y pérdida del poder adquisitivo</h2>
+          <p class="section-sub">Integración Numérica</p>
+        </div>
+        <div class="contexto-box">
+          <div class="contexto-icon"><i class="fa fa-money-bill-wave"></i></div>
+          <div>
+            <strong>Contexto:</strong> ¿Cuánto gasta realmente una familia al mes si los precios suben todos los días? El gasto acumulado es el área bajo la curva de precios.
+            <strong>Instrucciones:</strong> Puedes usar la curva de precios del Escenario C. Ingresa el consumo diario y comprueba cuánto dinero se perdió por la inflación.
+          </div>
+        </div>
+        <div id="modulo4-app"></div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- ESCENARIO E -->
+    <section id="escenarioE" class="section-modulo">
+      <div class="container-lg">
+        <div class="section-label">
+          <span class="label-chip chip-5">Escenario E</span>
+          <h2>Umbrales críticos de abastecimiento</h2>
+          <p class="section-sub">Raíces de Ecuaciones</p>
+        </div>
+        <div class="contexto-box">
+          <div class="contexto-icon"><i class="fa fa-skull-crossbones"></i></div>
+          <div>
+            <strong>Contexto:</strong> Queremos encontrar los momentos de quiebre (las raíces): el punto donde el costo acumulado supera el ingreso, la tasa de reposición donde el consumo iguala la entrada de combustible, o el umbral donde el pánico se vuelve masivo.
+            <strong>¡Explora!</strong> Carga los datos por defecto, elige una de las funciones no lineales y compara la velocidad de convergencia de los tres métodos.
+          </div>
+        </div>
+        <div id="modulo5-app"></div>
+      </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <!-- CONCLUSIONES -->
+    <section id="conclusiones" class="section-modulo alt-bg">
+      <div class="container-lg">
+        <div class="section-label text-center">
+          <span class="label-chip chip-1">Reflexión Final</span>
+          <h2>Conclusiones del Proyecto</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="concl-card">
+              <div class="concl-icon" style="background:rgba(201,184,232,0.2);color:#a07cc0;">
+                <i class="fa fa-lightbulb"></i>
+              </div>
+              <h4>¿Qué se aprendió?</h4>
+              <p>Los métodos numéricos no son solo matemáticas teóricas; son herramientas vitales para modelar y gestionar escenarios del mundo real. Al traducir una crisis de abastecimiento en ecuaciones, interpolaciones e integrales, pudimos encontrar respuestas concretas a preguntas vitales sobre distribución, inflación y escasez.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="concl-card">
+              <div class="concl-icon" style="background:rgba(247,197,213,0.2);color:#d97fa0;">
+                <i class="fa fa-trophy"></i>
+              </div>
+              <h4>Método más útil por escenario</h4>
+              <ul>
+                <li><strong>Logística:</strong> Gradiente Conjugado para sistemas grandes o mal condicionados.</li>
+                <li><strong>Reservas:</strong> RK4, su precisión salva el margen de error ante el umbral de colapso.</li>
+                <li><strong>Precios:</strong> Splines Cúbicos previenen las oscilaciones de Runge.</li>
+                <li><strong>Gasto:</strong> Simpson 1/3 ofrece un balance ideal de costo computacional y exactitud.</li>
+                <li><strong>Umbrales:</strong> Newton-Raphson es muy rápido si la derivada está bien comportada.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="concl-card">
+              <div class="concl-icon" style="background:rgba(255,214,184,0.2);color:#c8844a;">
+                <i class="fa fa-triangle-exclamation"></i>
+              </div>
+              <h4>Limitaciones del modelo</h4>
+              <ul>
+                <li>La volatilidad humana (pánico) es muy difícil de parametrizar con una constante estática.</li>
+                <li>Faltan ecuaciones acopladas: el costo del combustible afecta el precio del alimento, lo cual el modelo actual analiza por separado.</li>
+                <li>La interpolación asume un comportamiento suave en los mercados, pero las crisis presentan picos abruptos impredecibles.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="concl-card">
+              <div class="concl-icon" style="background:rgba(184,232,216,0.2);color:#5aa882;">
+                <i class="fa fa-rocket"></i>
+              </div>
+              <h4>Mejoras futuras</h4>
+              <ul>
+                <li>Integrar APIs de datos reales económicos en vivo.</li>
+                <li>Usar sistemas de Ecuaciones Diferenciales Ordinarias Acopladas para un modelo unificado.</li>
+                <li>Añadir modelos estocásticos (Monte Carlo) para simular la incertidumbre en los bloqueos.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-cs">
+      <div class="container-lg text-center">
+        <p>Predict.IO &mdash; Simuladora Numérica de Crisis &bull; Proyecto Final Métodos Numéricos &bull; 2026</p>
+        <p style="margin-top: 5px; opacity: 0.8; font-size: 0.8rem;">Desarrollado por <strong>Daphne Megan Cuevas Alconini</strong></p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  <script src="js/app.js"></script>
+  <script src="js/modulo1-sel.js"></script>
+  <script src="js/modulo2-edo.js"></script>
+  <script src="js/modulo3-interpolacion.js"></script>
+  <script src="js/modulo4-integracion.js"></script>
+  <script src="js/modulo5-raices.js"></script>
+</body>
+</html>
