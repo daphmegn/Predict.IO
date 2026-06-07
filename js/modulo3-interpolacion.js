@@ -92,6 +92,16 @@
         <div id="m3-alertas"></div>
         <div id="m3-resultados" style="display:none;">
 
+          <details class="algo-details fade-in mb-3">
+            <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
+            <p><strong>Interpolación Numérica:</strong> Reconstruye una curva continua a partir de puntos dispersos de precios.</p>
+            <ul>
+              <li><strong>Lagrange:</strong> Construye un único polinomio global. Con muchos puntos sufre oscilaciones violentas (Fenómeno de Runge).</li>
+              <li><strong>Newton:</strong> Utiliza diferencias divididas, permitiendo agregar nuevos puntos fácilmente.</li>
+              <li><strong>Splines Cúbicos:</strong> Une cada par de puntos con polinomios de grado 3, forzando suavidad (derivadas continuas) en las uniones. Es el más seguro.</li>
+            </ul>
+          </details>
+
           <div class="resultado-box fade-in mb-3">
             <h5><i class="fa fa-tag me-2"></i>Precio estimado en el día <span id="m3-dia-est-label">—</span></h5>
             <div id="m3-precios-estimados" class="row g-2 mt-2"></div>

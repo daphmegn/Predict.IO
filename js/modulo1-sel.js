@@ -83,6 +83,17 @@
         <div id="m1-alertas"></div>
         <div id="m1-resultados" style="display:none;">
 
+          <details class="algo-details fade-in mb-3">
+            <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
+            <p><strong>Sistemas de Ecuaciones Lineales:</strong> Convierte la red de transporte en una matriz $A$ y un vector de demanda $b$.</p>
+            <ul>
+              <li><strong>LU Doolittle:</strong> Factoriza $A$ en $L \\cdot U$ para resolver de forma directa sin iteraciones.</li>
+              <li><strong>Jacobi / Gauss-Seidel:</strong> Métodos iterativos que asumen dominancia diagonal, despejando cada variable paso a paso.</li>
+              <li><strong>SOR:</strong> Acelera Gauss-Seidel usando un factor de relajación $\\omega$.</li>
+              <li><strong>Gradiente Conjugado:</strong> Busca el mínimo de una forma cuadrática, ideal para matrices simétricas.</li>
+            </ul>
+          </details>
+
           <div class="resultado-box fade-in mb-3">
             <div class="d-flex justify-content-between">
               <h5><i class="fa fa-truck me-2"></i>Toneladas asignadas por Planta</h5>

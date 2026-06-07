@@ -166,6 +166,14 @@ a{text-decoration:none}
 .grafico-wrap{background:var(--bg-card);border-radius:var(--r);padding:1.2rem;box-shadow:0 2px 16px var(--sombra);margin-bottom:1.5rem}
 .grafico-wrap canvas{max-height:360px}
 
+/* ALGORITMOS DETAILS */
+.algo-details{background:var(--bg-alt);border:1px solid rgba(201,184,232,0.3);border-radius:10px;padding:1rem;margin-bottom:1.5rem;font-size:0.85rem;transition:var(--t)}
+.algo-details summary{font-weight:600;color:#9b6cc0;cursor:pointer;list-style:none;display:flex;align-items:center;gap:0.5rem;transition:var(--t)}
+[data-theme="dark"] .algo-details summary{color:#d4bfee}
+.algo-details summary::-webkit-details-marker{display:none;}
+.algo-details summary:hover{opacity:0.8}
+.algo-details p,.algo-details ul{margin-top:0.8rem;margin-bottom:0.5rem;font-size:0.82rem;line-height:1.6}
+
 /* TABS */
 .tabs-cs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .tab-btn{background:rgba(201,184,232,0.15);border:1.5px solid rgba(201,184,232,0.35);border-radius:30px;padding:0.4rem 1.1rem;font-size:0.82rem;font-weight:600;color:var(--col);cursor:pointer;transition:var(--t);font-family:'Poppins',sans-serif}

@@ -74,6 +74,16 @@
         <div id="m2-alertas"></div>
         <div id="m2-resultados" style="display:none;">
 
+          <details class="algo-details fade-in mb-3">
+            <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
+            <p><strong>Ecuaciones Diferenciales Ordinarias (EDO):</strong> Resuelve $y' = f(t,y)$ avanzando en pasos de tiempo $h$.</p>
+            <ul>
+              <li><strong>Euler:</strong> Usa la pendiente inicial del intervalo para trazar una recta. Es el más simple pero acumula error rápido.</li>
+              <li><strong>Heun:</strong> Promedia las pendientes inicial y final (predicción-corrección) reduciendo el error drásticamente.</li>
+              <li><strong>Runge-Kutta 4 (RK4):</strong> Promedia 4 pendientes distintas en cada paso. Es el estándar de la industria por su enorme precisión.</li>
+            </ul>
+          </details>
+
           <div id="m2-colapso-box" class="colapso-box mb-3" style="display:none;">
             <p style="font-size:0.9rem;font-weight:600;margin-bottom:0.1rem;color:#e07090;">Día de colapso estimado (RK4)</p>
             <div class="colapso-num" id="m2-dia-colapso">—</div>

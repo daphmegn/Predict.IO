@@ -77,6 +77,16 @@
         <div id="m5-alertas"></div>
         <div id="m5-resultados" style="display:none;">
 
+          <details class="algo-details fade-in mb-3">
+            <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
+            <p><strong>Raíces de Ecuaciones No Lineales:</strong> Busca el punto $x$ donde $f(x) = 0$ (umbral crítico).</p>
+            <ul>
+              <li><strong>Bisección:</strong> Corta el intervalo a la mitad iterativamente. Lento (convergencia lineal) pero infalible si hay cambio de signo.</li>
+              <li><strong>Newton-Raphson:</strong> Usa la tangente (derivada) para saltar rápidamente a la raíz. Convergencia cuadrática, pero falla si la derivada es cero.</li>
+              <li><strong>Secante:</strong> Aproxima la derivada con dos puntos. Casi tan rápido como Newton y no requiere la ecuación de la derivada.</li>
+            </ul>
+          </details>
+
           <div class="resultado-box fade-in mb-3">
             <h5><i class="fa fa-crosshairs me-2"></i>Raíz encontrada (Punto crítico)</h5>
             <div class="row g-2" id="m5-raiz-res"></div>
