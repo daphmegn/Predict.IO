@@ -76,7 +76,7 @@
 
           <details class="algo-details fade-in mb-3">
             <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
-            <p><strong>Ecuaciones Diferenciales Ordinarias (EDO):</strong> Resuelve $y' = f(t,y)$ avanzando en pasos de tiempo $h$.</p>
+            <p><strong>Ecuaciones Diferenciales Ordinarias (EDO):</strong> Resuelve <i>y' = f(t,y)</i> avanzando en pasos de tiempo <i>h</i>.</p>
             <ul>
               <li><strong>Euler:</strong> Usa la pendiente inicial del intervalo para trazar una recta. Es el más simple pero acumula error rápido.</li>
               <li><strong>Heun:</strong> Promedia las pendientes inicial y final (predicción-corrección) reduciendo el error drásticamente.</li>

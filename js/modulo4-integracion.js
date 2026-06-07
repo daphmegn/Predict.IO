@@ -71,11 +71,11 @@
 
           <details class="algo-details fade-in mb-3">
             <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
-            <p><strong>Integración Numérica:</strong> Aproxima el área bajo la curva (gasto acumulado) dividiendo el dominio en $n$ franjas.</p>
+            <p><strong>Integración Numérica:</strong> Aproxima el área bajo la curva (gasto acumulado) dividiendo el dominio en <i>n</i> franjas.</p>
             <ul>
-              <li><strong>Trapecio:</strong> Une los puntos con líneas rectas. Tiene un error proporcional a $h^2$.</li>
+              <li><strong>Trapecio:</strong> Une los puntos con líneas rectas. Tiene un error proporcional a <i>h&sup2;</i>.</li>
               <li><strong>Simpson 1/3:</strong> Ajusta parábolas perfectas cada 3 puntos. Es ultra preciso si la curva es suave.</li>
-              <li><strong>Simpson 3/8:</strong> Ajusta polinomios cúbicos cada 4 puntos. Similar precisión a 1/3 pero útil para $n$ múltiplo de 3.</li>
+              <li><strong>Simpson 3/8:</strong> Ajusta polinomios cúbicos cada 4 puntos. Similar precisión a 1/3 pero útil para <i>n</i> múltiplo de 3.</li>
             </ul>
           </details>
 

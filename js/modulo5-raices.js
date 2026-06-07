@@ -79,7 +79,7 @@
 
           <details class="algo-details fade-in mb-3">
             <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
-            <p><strong>Raíces de Ecuaciones No Lineales:</strong> Busca el punto $x$ donde $f(x) = 0$ (umbral crítico).</p>
+            <p><strong>Raíces de Ecuaciones No Lineales:</strong> Busca el punto <i>x</i> donde <i>f(x) = 0</i> (umbral crítico).</p>
             <ul>
               <li><strong>Bisección:</strong> Corta el intervalo a la mitad iterativamente. Lento (convergencia lineal) pero infalible si hay cambio de signo.</li>
               <li><strong>Newton-Raphson:</strong> Usa la tangente (derivada) para saltar rápidamente a la raíz. Convergencia cuadrática, pero falla si la derivada es cero.</li>

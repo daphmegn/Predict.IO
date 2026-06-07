@@ -85,11 +85,11 @@
 
           <details class="algo-details fade-in mb-3">
             <summary><i class="fa fa-microchip"></i> ¿Qué algoritmo utiliza este módulo?</summary>
-            <p><strong>Sistemas de Ecuaciones Lineales:</strong> Convierte la red de transporte en una matriz $A$ y un vector de demanda $b$.</p>
+            <p><strong>Sistemas de Ecuaciones Lineales:</strong> Convierte la red de transporte en una matriz <i>A</i> y un vector de demanda <i>b</i>.</p>
             <ul>
-              <li><strong>LU Doolittle:</strong> Factoriza $A$ en $L \\cdot U$ para resolver de forma directa sin iteraciones.</li>
+              <li><strong>LU Doolittle:</strong> Factoriza <i>A</i> en <i>L &middot; U</i> para resolver de forma directa sin iteraciones.</li>
               <li><strong>Jacobi / Gauss-Seidel:</strong> Métodos iterativos que asumen dominancia diagonal, despejando cada variable paso a paso.</li>
-              <li><strong>SOR:</strong> Acelera Gauss-Seidel usando un factor de relajación $\\omega$.</li>
+              <li><strong>SOR:</strong> Acelera Gauss-Seidel usando un factor de relajación <i>&omega;</i>.</li>
               <li><strong>Gradiente Conjugado:</strong> Busca el mínimo de una forma cuadrática, ideal para matrices simétricas.</li>
             </ul>
           </details>
